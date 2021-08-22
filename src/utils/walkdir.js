@@ -10,7 +10,7 @@ async function* walkdir(path, cb = () => true) {
     if (item.isFile() && cb(path)) {
       yield path;
     } else if (item.isDirectory()) {
-      yield* walkdir(path);
+      yield* walkdir(path, cb);
     }
   }
 }
