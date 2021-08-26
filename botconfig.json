@@ -1,4 +1,5 @@
 {
   "clientId": "CLIENT_ID",
-  "guildId": "GUILD_ID"
+  "guildId": "GUILD_ID",
+  "intents": 1
 }

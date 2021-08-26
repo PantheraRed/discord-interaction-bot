@@ -1,5 +1,5 @@
 const { Client, Collection } = require('discord.js');
-const { clientId, guildId } = require('../botconfig');
+const { intents, clientId, guildId } = require('../botconfig');
 const { walkdir } = require('./utils/index');
 const { Routes } = require('discord-api-types/v9');
 const { REST } = require('@discordjs/rest');
@@ -8,7 +8,7 @@ const { resolve } = require('path');
 require('dotenv').config();
 const { DISCORD_TOKEN } = process.env;
 
-const client = new Client({ intents: 513 });
+const client = new Client({ intents });
 client.commands = new Collection;
 
 const rest = new REST({ version: '9' }).setToken(DISCORD_TOKEN);
